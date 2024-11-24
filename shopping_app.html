@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasion Park</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./logo2.webp">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            border: 2px solid black;
+            overflow:visible;
+           
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+        header{
+            height: 12vh;
+            width: 100vw;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(245, 221, 225);
+            position: fixed;
+            
+        }
+        section{
+            height: 60vh;
+            width: 100%;
+            /* border: 2px solid yellow; */
+            display: flex;
+            justify-content: space-evenly;
+          
+            align-items: center;
+            gap: 20px;
+            background-color: pink;
+
+        } 
+        nav{
+            height: 45%;
+            width:95% ;
+            /* border: 2px solid green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            position: fixed;
+            
+            
+           
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            
+        }
+        nav a:hover{
+        text-decoration: underline;
+       }
+        nav .c {
+            height: 30px;
+            width: 280px;
+            border: 2px solid rgba(58, 58, 58, 0.788);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            }        
+            nav .c input{
+                height: 23px;
+                width: 150px;
+                border: none;
+                border-radius: 10px;
+                background-color: transparent;
+        }
+        article{
+            height:400px;
+            width: 100%;
+            /* border: 2px solid blue; */
+            padding-top: 100px;
+            display: flex;
+            
+            justify-content: space-evenly;
+            align-items: center;
+            background-image: linear-gradient(to right,skyblue,rgb(224, 84, 224));
+            background-size: cover;
+            
+
+        }
+        
+            
+
+        
+        div{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .gol{
+            height: 200px;
+            width: 200px;
+            /* border: 2px solid green; */
+            border-radius: 50%;
+           
+        }
+        article .gol:hover{
+            box-shadow: 5px 15px 15px black;
+            transform: scale(1.2);
+        }
+        section div{
+            height: 200px;
+            width: 300px;
+            /* border: 2px solid purple; */
+        }
+        .se{
+            height: 75vh;
+            width: 100%;
+            /* border: 2px solid yellow; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            gap: 7px;
+            
+             background-image: linear-gradient(to right,rgb(206, 254, 237),rgb(249, 214, 249),rgb(246, 246, 209));
+        }
+
+        .se .box{
+            height: 80%;
+            width: 95%;
+             /* border: 2px solid red;  */
+              overflow:auto;  
+              
+            transition-duration: 2s;
+            gap: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+             }
+             .se .box::-webkit-scrollbar{
+                display: none;
+             }
+        .gol img{
+            height: 200px;
+            width: 200px;
+            background-size: cover;
+            border-radius: 50%;
+
+        }
+        
+         .box .sale{
+            height: 300px;
+            width: 220px;
+             /* border: 2px solid green;  */
+            background-size: cover;
+        
+        }
+        .box .sale img:hover{
+            transform: scale(1.1);
+        }
+        .sale img {
+            height: 300px;
+            width: 220px;
+            
+            background-size: cover;
+        }
+        .thamdi img:hover{
+            transform: scale(1.1);
+        }
+       
+        .se h1{
+            font-weight: 100px;
+            color:rgb(181, 20, 76);
+            text-decoration:aqua;
+            text-shadow: 5px 5px 5px rgb(255, 183, 0);
+            
+            font-family: sans-serif;
+            font-size: 50px;
+        }
+        .se h1:hover{
+            text-decoration: underline;
+        }
+        .sale{
+            transition-timing-function: linear;
+        }
+        .thandi{
+            height: 400px;
+            width: 100%;
+            display: flex;
+            /* border: 2px solid green; */
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(rgb(185, 250, 196),white,rgb(190, 172, 244));
+            flex-direction: column;
+            padding: 10px;
+            
+        }
+        
+        .thandi .d{
+           height: 330px;
+           width: 90%; 
+           /* border: 2px solid orange; */
+           display: flex;
+           justify-content: space-evenly;
+           align-items: center;
+           gap: 10px;
+           
+        }
+        .thandi .d .thamdi{
+            height: 250px;
+            width: 280px;
+            /* border: 2px solid red; */
+            
+        }
+        .thamdi img{
+            height: 290px;
+            width: 280px;
+            background-size: cover;
+        }
+        .thandi h1{
+            font-size: 38px;
+            color: rgb(79, 17, 50);
+            text-shadow: 5px 5px 5px skyblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .btn{
+            height: 20px;
+            width: 100px;
+            border-radius: 10px;
+            /* border: 2px solid blue; */
+            background-color: blue;
+            box-shadow: 5px 5px 5px gray;
+            color: white;
+        }
+        .btn:hover{
+            background-color: transparent;
+            color: black;
+        }
+        .bb{
+            height: 500px;
+            width: 100%;
+            display: flex;
+             /* border: 2px solid green;  */
+            justify-content: space-evenly;
+            align-items: center;
+            
+            background-color:rgb(228, 243, 255);
+        }
+        .bb .bb2{
+            height: 440px;
+            width: 550px;
+            /* border: 2px solid black; */
+            border-radius: 30px;
+
+        }
+         .bb2 img{
+            height: 440px;
+            width: 550px;
+            background-size: cover;
+            border-radius: 20px;
+        } 
+        .bb3{
+            height: 500px;
+            width: 100%;
+            display: flex;
+            /* border: 2px solid green;   */
+            justify-content: space-evenly;
+            align-items: center;
+            
+            background-color:rgb(228, 243, 255);
+        }
+        .bb3 .bb4{
+            height: 440px;
+            width: 550px;
+            /* border: 2px solid black;  */
+            border-radius: 30px;
+
+        }
+         .bb4 img{
+            height: 440px;
+            width: 550px;
+            background-size: cover;
+            border-radius: 20px;
+        } 
+        .w{
+            height: 20px;
+            width: 100%;
+            background-color: white;
+        }
+        .bb5{
+            height: 500px;
+            width: 100%;
+            display: flex;
+            /* border: 2px solid green;   */
+            justify-content: space-evenly;
+            align-items: center;
+            
+            background-color:rgb(228, 243, 255);
+        }
+        .bb5 .bb6{
+            height: 440px;
+            width: 550px;
+            /* border: 2px solid black;  */
+            border-radius: 30px;
+
+        }
+         .bb6 img{
+            height: 440px;
+            width: 550px;
+            background-size: cover;
+            border-radius: 20px;
+        } 
+        footer{
+            height: 400px;
+            width: 100%;
+            /* border: 2px solid blue; */
+            /* background-color: rgb(25, 98, 223); */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: start;
+            
+
+        }
+       
+        .ft{
+            height: 330px;
+            width: 900px;
+            border: 2px solid green; 
+            background-color: aliceblue; 
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        main{
+            height: 400px;
+            width: 50%;
+            /* border: 2px solid red; */
+            display: flex;
+            /* flex-direction: column; */
+            justify-content:space-evenly;
+            align-items: center;
+            background-color: black;
+            text-align:center;
+            
+        }
+        .ft1{
+            height: 300px;
+            width: 200px;
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+        
+        }
+
+        
+        .ft2{
+            height: 300px;
+            width: 200px;
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+        
+        }
+        .ft3{
+            height: 300px;
+            width: 200px;
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+        
+        }
+        .ft4{
+            height: 300px;
+            width: 200px;
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+        }
+        .ft5{
+            height: 300px;
+            width: 300px;
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+        }
+        .ft6{
+            height: 300px;
+            width: 300px;
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+        }
+        main h1{
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:rgb(222, 222, 182);
+        }
+        main h3{
+            font-size: 15px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        main p{
+            font-size: 15px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white; 
+        }
+        main h5{
+            font-size: 15px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color:rgb(146, 26, 226); 
+        }
+        
+    </style>    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="c">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search for anything" placeholder="search for anything">
+            <i class="fa-solid fa-microphone"></i>
+            <i class="fa-solid fa-camera"></i>
+            </div>
+            
+            <a href="" class="a">men</a>
+            <a href="" class="a">women</a>
+            <a href="" class="a">kids</a>
+            <a href="" class="a">beauty</a>
+            <a href="" class="a">electronic</a>
+            <a href="" class="a">books</a>
+            <a href="" class="a">footware</a>
+            <a href="" class="a">home,kitchan</a>
+            <a href="">Grocery</a>
+            
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-gift"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </nav>
+    </header>
+    <article >
+       
+        <div class="gol">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnJ_BFUni34eW24ULKjk6LddwpvvzZhO1qaQ&s" alt="">
+        </div>
+        <div class="gol">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCqkB3QStJSKLvxhON0pSQsaOnxINTbpK_5Q&s" alt="">
+        </div>
+        <div class="gol">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm2fw5BHduQkWIfgQh-P8S2Dv1h4IbGMpnWA&s" alt="">
+        </div>
+        <div class="gol">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXUVyErN0K4wF0xkCWSHc62-nkW1zApS3ytg&s" alt="">
+        </div>
+        <div class="gol">
+            <img src="https://images.meesho.com/images/products/407517444/sqiek_512.webp" alt="">
+        </div>
+       
+    </article>
+    <section class="se">
+        <h1>Shadi Mubarak Sale</h1>
+        
+        <button class="btn">Shop Now</button>
+        <div class="box">
+
+            <div class="sale">
+                <img src="https://silvermerc.com/cdn/shop/files/DSC_9422.jpg?v=1692347873" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://static.india.com/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-07-at-5.28.00-PM.jpeg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2mFYdkKbECG0zhY_M_9jp3NtCM4RL1klf0A&s" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-myRcrjZneNRHkcRpJl_yW4aOc7eCnj24A&s" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi7uFtlxRDl4bY2dnmYT_H0u8lR_oTkwRu8w&s" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://img.weddingbazaar.com/shaadisaga_production/photos/pictures/008/267/283/new_medium/mayuripatil824.png?1711015085" alt="">
+            </div>
+            <div class="sale"> 
+                <img src="https://5.imimg.com/data5/IU/NA/CF/SELLER-58135491/whatsapp-image-2019-09-05-at-14-45-12-4--500x500.jpeg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://image.wedmegood.com/resized-nw/700X/wp-content/uploads/2019/07/1568396426_A_R_Wed32.jpg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://www.rithikasuits.com/wp-content/uploads/2024/05/06-May-14-1-min.jpg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVG6xUsRU68AiqFdAae0JivU4BQUGVYFTLhQ&s" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRObSCN9AjIwZFQ-pMndKLE9enmhVHaiNX8hg&s" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://i.pinimg.com/236x/9d/18/e1/9d18e1df395541e2bf106a7006cced35.jpg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://www.ethnicplus.in/media/catalog/product/cache/1d5df636cf8c8988ea2d2c570bb7c21d/k/a/ka-1121_purple-1.jpg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://images.bewakoof.com/utter/content/3792/content_shilpa_shetty.jpg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://images.ottplay.com/webstories/wp-content/uploads/2023/09/cover1-95.jpg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://www.wedabout.com/blog/wp-content/uploads/2023/05/sequin-gown-indian-bridesmaid-dresses.jpg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://cdn0.weddingwire.in/article/6073/original/1280/jpg/123706-nikitamtiwari.jpeg" alt="">
+            </div>
+            <div class="sale">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWInOaFWWkQ1FQh41iBw13rba7GDumlSy0nccI9htAP9lycsdMtygWATqG9P6eaHEN3g&usqp=CAU" alt="">
+            </div>
+           
+            <div class="sale">
+                <img src="https://assets2.andaazfashion.com/media/catalog/product/b/e/beige-embroidered-net-suit-with-cigarette-pants-lstv125527-1.jpg" alt="">
+            </div>
+
+        </div>
+    </section>
+    <section  class="thandi">
+        <h1>New season New Wordrobe</h1>
+        <h2>The best stock ever</h2>
+       <div class="d">
+        
+        <div class="thamdi">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3DsvPK_Bke0lsJVg76F5yPujdUav-Vv6TRg&s" alt="">
+           </div>
+           <div class="thamdi">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/1/KN/YD/SC/182376891/kids-winter-clothes.jpeg" alt="">
+           </div>
+           <div class="thamdi">
+            <img src="https://www.beyours.in/cdn/shop/files/hoodie-sweatshirt-banner.jpg?v=1695638330&width=3000" alt="">
+           </div>
+           <div class="thamdi">
+            <img src="https://www.tenereteam.com/blogs/wp-content/uploads/2023/09/why-buy-winter-clothes-in-summer.png" alt="">
+           </div>
+        
+           
+       </div>
+    </section>
+    <section class="bb">
+        <div class="bb2">
+            <img src="https://www.lakmeindia.com/cdn/shop/files/Sqaud_Banner_900x.png?v=1696106916" alt="">
+        </div>
+        <div class="bb2">
+            <img src="https://premierbooksstore.lk/wp-content/uploads/2023/10/istockphoto-1263779983-612x612-1.jpg" alt="">
+        </div>
+    </section>
+    <section class="bb3">
+        <div class="bb4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRilaBh6BME_CZQXkErdIqHCCW7KB02sM8nlQ&s" alt="">
+        </div>
+        <div class="bb4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjdsEBO0lyGnWwrOgxH82vSq8qJVHdo6R0BQ&s" alt="">
+        </div>
+    </section>
+    <section class="bb5">
+        <div class="bb6">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH_Z8Toxdf7Vg37gx5twD-sac2L9mqzkXw9w&s" alt="">
+        </div>
+        <div class="bb6">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyOqfJQthiCW7RonORMR2-vowH1yij4aNvGzrf62VirNbUeAzQxpG9DgQ4m9VFd0i8irU&usqp=CAU" alt="">
+        </div>
+    </section>
+    <section class="w">
+
+    </section>
+    <footer>
+        <main>
+         <div class="ft1">
+             <h1>ABOUT</h1>
+             <H3>Contact us</H3>
+             <H3>About us</H3>
+             <H3>Careers</H3>
+             <H3>fashion park stories</H3>
+             <H3>press</H3>
+             <H3>corporate information</H3>
+         </div>
+         <div class="ft2">
+             <h1>GROUP COMPANIES</h1>
+             <h3>Myntra</h3>
+             <h3>flipkart</h3>
+             <h3>meesho</h3>
+         </div>
+         <div class="ft3">
+             <h1>Help</h1>
+             <h3>Payment</h3>
+             <h3>Shipping</h3>
+             <h3>Cancellation</h3>
+             <h3>Return</h3>
+             <h3>FAQ</h3>
+         </div>
+         <div class="ft4">
+             <h1>COSTOMER POLICY</h1>
+             <h3>Cancellation& return</h3>
+             <h3>Terms of use</h3>
+             <h3>Security</h3>
+             <h3>Privacy</h3>
+             <h3>Sitemap</h3>
+         </div>
+        </main>
+        <main>
+            <div class="ft5"> 
+                <h1>Mail Us </h1>
+                <p>
+                    Fashion Internet private Limited,
+                    Buldings alyassy ,Bugonia &
+                    clove Embassy tech village ,
+                    Outer Ring Road , Devarabessnahalli village,
+                    Bengaluru,560103,
+                    karnataka,India
+    
+                </p>
+                <h5>Social
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </h5>
+            </div>
+            <div class="ft6">
+                <h1>Registered Office Address:</h1>
+                <p>
+                    Fashion Internet private Limited,
+                    Buldings alyassy ,Bugonia &
+                    clove Embassy tech village ,
+                    Outer Ring Road , Devarabessnahalli village,
+                    Bengaluru,560103,
+                    karnataka,India
+                    CIN: U15109KA2012PTCO66107
+                    Telephone:044-4567995748/022-6575902930
+                </p>
+            </div>
+           </main>
+</footer>
+
+   
+   
+    
+</body>
+</html>
